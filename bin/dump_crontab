@@ -6,7 +6,7 @@ git pull --ff-only --quiet || exit $?
 git diff --cached --quiet || exit $?
 git add crontab
 if git commit -m 'updated crontab (automated commit)' > /dev/null; then
-   git push cgal master
+   git push origin main
 else
     true
 fi
