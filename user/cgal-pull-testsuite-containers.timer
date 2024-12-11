@@ -1,0 +1,9 @@
+
+[Unit]
+Description=Timer for pulling Docker images
+
+[Timer]
+OnCalendar=20:06
+
+[Install]
+WantedBy=timers.target
