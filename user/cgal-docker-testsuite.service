@@ -1,0 +1,9 @@
+[Unit]
+Description=Run CGAL Docker testsuite
+
+[Service]
+Type=oneshot
+EnvironmentFile=%h/.config/systemd/user/environment
+WorkingDirectory=/home/lrineau/Git/cgal-testsuite-dockerfiles
+ExecStart=/usr/bin/time /home/lrineau/Git/cgal-testsuite-dockerfiles/test_cgal.py --use-fedora-selinux-policy --force-rm --max-cpus 20 --container-cpus 8 --jobs 10 --upload-results --images $($HOME/bin/docker_images_to_test_today)
+Slice=cgal-testsuite.slice
