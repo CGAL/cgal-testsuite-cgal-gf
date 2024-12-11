@@ -1,0 +1,8 @@
+[Unit]
+Description=Create CGAL internal release
+
+[Service]
+Type=oneshot
+EnvironmentFile=%h/.config/systemd/user/environment
+ExecStart=/usr/bin/python3 /home/lrineau/CGAL/cgal-testsuite-cgal-gf.git/bin/create_internal_release_of_the_day.py
+Slice=cgal-testsuite.slice
