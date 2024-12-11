@@ -1,0 +1,7 @@
+[Unit]
+Description=Slice for CGAL testsuite
+
+[Slice]
+# You can set resource limits here, for example:
+#CPUQuota=50%
+#MemoryMax=80%

@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer to dump crontab to Git every hour at minute 18
+
+[Timer]
+OnCalendar=*:18
+Persistent=true
+
+[Install]
+WantedBy=timers.target
