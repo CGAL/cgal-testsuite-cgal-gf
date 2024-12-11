@@ -1,0 +1,9 @@
+[Unit]
+Description=Update CGAL testsuite result pages
+
+[Service]
+Type=oneshot
+EnvironmentFile=%h/.config/systemd/user/environment
+WorkingDirectory=%h/CGAL/collect_and_public_testresults
+ExecStart=%h/CGAL/collect_and_public_testresults/treat_result_collection
+Slice=cgal-testsuite.slice
