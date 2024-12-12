@@ -16,8 +16,8 @@ actions = {
     "Tuesday": integration,
     "Wednesday": integration,
     "Thursday": integration,
-    "Friday": release("5.5"),
-    "Saturday": release("5.6"),
+    "Friday": release("5.6"),
+    "Saturday": release("6.0"),
     "Sunday": master,
 }
 
