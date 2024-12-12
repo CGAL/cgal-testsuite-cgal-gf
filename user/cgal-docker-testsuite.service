@@ -2,8 +2,8 @@
 Description=Run CGAL Docker testsuite
 
 [Service]
-Type=oneshot
+Type=notify
 EnvironmentFile=%h/.config/systemd/user/environment
 WorkingDirectory=/home/lrineau/Git/cgal-testsuite-dockerfiles
-ExecStart=/usr/bin/time /home/lrineau/Git/cgal-testsuite-dockerfiles/test_cgal.py --use-fedora-selinux-policy --force-rm --max-cpus 20 --container-cpus 8 --jobs 10 --upload-results --images $($HOME/bin/docker_images_to_test_today)
+ExecStart=/usr/bin/python3 %h/Git/cgal-testsuite-dockerfiles/test_cgal.py --use-fedora-selinux-policy --force-rm --max-cpus 20 --container-cpus 8 --jobs 10 --upload-results --images @%h/.config/CGAL/test_cgal_docker_images
 Slice=cgal-testsuite.slice
