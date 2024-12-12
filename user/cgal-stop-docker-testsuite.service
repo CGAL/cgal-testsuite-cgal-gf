@@ -1,0 +1,6 @@
+[Unit]
+Description=Stop CGAL Docker testsuite
+
+[Service]
+Type=oneshot
+ExecStart=/bin/echo "Stopping CGAL Docker testsuite"

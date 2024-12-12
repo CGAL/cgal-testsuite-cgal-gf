@@ -1,5 +1,6 @@
 [Unit]
 Description=Run CGAL Docker testsuite
+Conflicts=cgal-stop-docker-testsuite.service
 
 [Service]
 Type=notify
