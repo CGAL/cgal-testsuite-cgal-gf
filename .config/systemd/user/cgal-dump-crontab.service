@@ -1,0 +1,8 @@
+[Unit]
+Description=Dump crontab to Git
+
+[Service]
+Type=oneshot
+EnvironmentFile=%h/.config/systemd/user/environment
+ExecStart=/bin/zsh %h/bin/dump_crontab
+#Slice=cgal-testsuite.slice

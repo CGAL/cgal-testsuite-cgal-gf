@@ -1,0 +1,8 @@
+[Unit]
+Description=Pull CGAL testsuite container images
+
+[Service]
+Type=oneshot
+EnvironmentFile=%h/.config/systemd/user/environment
+ExecStart=/bin/bash -c 'for i in $(cat /home/lrineau/.config/CGAL/test_cgal_docker_images); do docker pull $i; done; docker rmi $(docker images | awk "/<none>/ {print $3}")'
+Slice=cgal-testsuite.slice
