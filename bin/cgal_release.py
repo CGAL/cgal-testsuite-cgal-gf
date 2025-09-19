@@ -60,15 +60,15 @@ class BetaRelease(Release):
 integration = InternalRelease("integration")
 integration.repo = "$HOME/CGAL/branches/integration.git"
 integration.cwd = "$HOME/CGAL/create_internal_release"
-master = Release("master")
-master.repo = "$HOME/CGAL/branches/master.git"
-master.cwd = "$HOME/CGAL/create_internal_release"
+main = Release("main")
+main.repo = "$HOME/CGAL/branches/main.git"
+main.cwd = "$HOME/CGAL/create_internal_release"
 
 
-def beta_release_from_master(beta_number):
-    """Convenience function to create a beta release from master"""
-    rel = BetaRelease("master", beta_number)
-    rel.repo = "$HOME/CGAL/branches/master.git"
+def beta_release_from_main(beta_number):
+    """Convenience function to create a beta release from main"""
+    rel = BetaRelease("main", beta_number)
+    rel.repo = "$HOME/CGAL/branches/main.git"
     rel.cwd = "$HOME/CGAL/create_internal_release"
     return rel
 
