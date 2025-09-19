@@ -18,7 +18,7 @@ actions = {
     "Thursday": integration,
     "Friday": release("6.0"),
     "Saturday": release("6.1"),
-    "Sunday": release("main"),
+    "Sunday": main,
 }
 
 

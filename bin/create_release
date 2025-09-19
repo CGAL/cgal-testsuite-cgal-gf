@@ -20,7 +20,7 @@ fi
 
 pushd "$1" > /dev/null
 branch=$(git rev-parse --abbrev-ref HEAD)
-remote=$(git "config branch.${branch}.remote")
+remote=$(git config "branch.${branch}.remote")
 git fetch $DRY_RUN $QUIET -p --all
 [ -z "$DRY_RUN" ] && git reset $QUIET --hard "$remote/$branch"
 git clean $DRY_RUN $QUIET -f -d -x
